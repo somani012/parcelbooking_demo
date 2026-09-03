@@ -16,11 +16,17 @@
     "bcryptjs": "2.4.3",
     "exceljs": "4.4.0",
     "jose": "5.9.2",
-    "next": "14.2.13",
+    "next": "^14.2.35",
     "pdfkit": "0.15.0",
     "qrcode": "1.5.4",
     "react": "18.3.1",
     "react-dom": "18.3.1"
+  },
+  "allowScripts": {
+    "@prisma/client@5.19.1": true,
+    "@prisma/engines@5.19.1": true,
+    "esbuild@0.23.1": true,
+    "prisma@5.19.1": true
   },
   "devDependencies": {
     "@types/bcryptjs": "2.4.6",
