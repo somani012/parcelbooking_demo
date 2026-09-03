@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-paper text-ink antialiased;
+  }
+  input, select, textarea {
+    @apply w-full rounded border border-neutral-300 bg-white px-3 py-2 text-sm text-ink outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:bg-neutral-100;
+  }
+  label { @apply mb-1 block text-[13px] font-medium text-neutral-600; }
+  ::selection { @apply bg-primary/15; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-50; }
+  .btn-quiet { @apply inline-flex items-center justify-center gap-2 rounded border border-neutral-300 bg-white px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-primary hover:text-primary; }
+  .btn-danger { @apply inline-flex items-center justify-center gap-2 rounded bg-debit px-4 py-2 text-sm font-semibold text-white hover:bg-red-800; }
+  .card { @apply rounded-md border border-neutral-200 bg-white; }
+  .ledger-table { @apply w-full text-sm; }
+  .ledger-table th { @apply border-b border-neutral-300 px-3 py-2 text-left text-[12px] font-semibold text-neutral-500; }
+  .ledger-table td { @apply border-b border-neutral-100 px-3 py-2.5 align-top; }
+  .ledger-table tbody tr:hover { @apply bg-primary-light/40; }
+  .money { @apply tabular-nums; font-feature-settings: "tnum"; }
+  .field-error { @apply rounded border border-debit/30 bg-red-50 px-3 py-2 text-sm text-debit; }
+  .field-ok { @apply rounded border border-credit/30 bg-green-50 px-3 py-2 text-sm text-credit; }
+}
